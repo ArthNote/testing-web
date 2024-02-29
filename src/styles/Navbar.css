@@ -45,13 +45,15 @@ nav {
   left: 20px;
 }
 
+#mobile {
+  display: none;
+}
+
 #mobile i {
   color: black;
 }
 
-#mobile {
-  display: none;
-}
+
 
 @media screen and (max-width: 769px) {
   #navbar {

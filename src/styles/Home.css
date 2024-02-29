@@ -1,0 +1,135 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 91.4vh;
+  width: 100%;
+  background-image: url("../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-content {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  -webkit-text-stroke: black 1px;
+}
+
+.hero-content h4 {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.hero-content a {
+  text-decoration: none;
+  background-color: #5417d7;
+  color: white;
+  padding: 6px 23px;
+  font-weight: 600;
+  border-radius: 6px;
+  width: fit-content;
+  border: #5417d7 solid 2px;
+}
+
+.hero-content a:hover {
+  border: solid #5417d7 2px;
+  color: #5417d7;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+
+
+/*menu section*/
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.menu h1 {
+  letter-spacing: 2px;
+  font-size: 45px;
+  font-style: italic;
+}
+
+.menu-items {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: fit-content;
+  height: 340px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.item-img img {
+  width: 100%;
+  height: 197px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: cover;
+}
+
+.item-content {
+  padding: 15px;
+}
+
+.item-content h3 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.item-content p {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 769px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+  }
+}

@@ -1,8 +1,7 @@
 import Logo from "../assets/logo.svg";
 
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "../styles/Navbar.css";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
 function Navbar() {
@@ -10,7 +9,7 @@ function Navbar() {
 
   const handleClick = () => {
     setClicked(!clicked);
-  }
+  };
 
   return (
     <>
@@ -20,20 +19,10 @@ function Navbar() {
         </Link>
         <div>
           <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>
-            <li>
-              <Link to="/" className="active">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/menu">Menu</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            <CustomeLink to="/">Home</CustomeLink>
+            <CustomeLink to="/menu">Menu</CustomeLink>
+            <CustomeLink to="/about">About</CustomeLink>
+            <CustomeLink to="/contact">Contact</CustomeLink>
           </ul>
         </div>
         <div id="mobile" onClick={handleClick}>
@@ -45,3 +34,15 @@ function Navbar() {
 }
 
 export default Navbar;
+
+function CustomeLink({ to, children}: any) {
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({path : resolvedPath.pathname, end: true})
+  return (
+    <li>
+      <Link to={to} className={isActive ? "active" : ""}>
+        {children}
+      </Link>
+    </li>
+  );
+}

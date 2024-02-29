@@ -1,0 +1,26 @@
+
+.bg {
+  height: 40vh;
+  width: 100%;
+  background-image: url("../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-section {
+  padding: 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-section h1 {
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 18px;
+}
