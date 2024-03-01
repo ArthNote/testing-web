@@ -15,7 +15,7 @@ function Navbar() {
     <>
       <nav>
         <Link to="/">
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="logo" />
         </Link>
         <div>
           <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>

@@ -6,6 +6,11 @@ nav {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
+nav .logo{
+  width: 50px;
+  padding: 0;
+}
+
 #navbar {
   display: flex;
   align-items: center;
@@ -31,7 +36,7 @@ nav {
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: #5417d7;
+  color: #F8AA2B;
 }
 
 #navbar li a:hover::after,
@@ -39,7 +44,7 @@ nav {
   content: "";
   width: 30%;
   height: 2px;
-  background-color: #5417d7;
+  background-color: #F8AA2B;
   position: absolute;
   bottom: -4px;
   left: 20px;

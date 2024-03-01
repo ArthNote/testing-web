@@ -1,0 +1,96 @@
+.container-box {
+  width: 100vw;
+  height: 84.5vh;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.img-holder {
+  width: 50%;
+  height: 100%;
+  background-image: url("../assets/background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact form input {
+  color: black;
+  padding: 10px 0;
+  border: none;
+  border-bottom: #f8aa2b solid 1px;
+  background-color: transparent;
+  margin: 10px 0;
+}
+
+.contact form input:focus {
+  outline: none;
+}
+
+.contact form textarea {
+  padding: 10px 0;
+  color: black;
+  border: none;
+  border-bottom: #f8aa2b solid 1px;
+  background-color: transparent;
+  margin: 10px 0;
+  max-height: 100px;
+  min-height: 50px;
+}
+
+.contact form textarea:focus {
+  outline: none;
+}
+
+.contact form button {
+  margin: 10px 0;
+  border: none;
+  width: fit-content;
+  padding: 6px 23px;
+  color: white;
+  background-color: #f8aa2b;
+  font-weight: 600;
+  border-radius: 6px;
+  border: #f8aa2b solid 2px;
+}
+
+.contact form button:hover {
+  border: solid #f8aa2b 2px;
+  color: #f8aa2b;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 769px) {
+  .container-box {
+    justify-content: center;
+  }
+  .img-holder {
+    display: none;
+  }
+  .contact {
+    width: 100%;
+    text-align: center;
+  }
+  .contact form button {
+    align-self: center;
+  }
+}

@@ -28,6 +28,11 @@
   -webkit-text-stroke: black 1px;
 }
 
+.hero-content h1 span {
+  color: #f8aa2b;
+  -webkit-text-stroke: black 1.5px;
+}
+
 .hero-content h4 {
   font-weight: 400;
   letter-spacing: 2px;
@@ -35,23 +40,21 @@
 
 .hero-content a {
   text-decoration: none;
-  background-color: #5417d7;
+  background-color: #f8aa2b;
   color: white;
   padding: 6px 23px;
   font-weight: 600;
   border-radius: 6px;
   width: fit-content;
-  border: #5417d7 solid 2px;
+  border: #f8aa2b solid 2px;
 }
 
 .hero-content a:hover {
-  border: solid #5417d7 2px;
-  color: #5417d7;
+  border: solid #f8aa2b 2px;
+  color: #f8aa2b;
   background-color: transparent;
   transition: 0.2s ease-in-out;
 }
-
-
 
 /*menu section*/
 
@@ -73,6 +76,7 @@
 .menu-items {
   margin-top: 10px;
   display: flex;
+  padding: 0 15px;
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
@@ -91,7 +95,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.item:hover{
+.item:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: 0.2s ease-in-out;
 }
@@ -127,9 +131,23 @@
   .hero-content {
     align-items: center;
     text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 0 20px;
   }
 
   .hero-content h1 {
     font-size: 50px;
+  }
+
+  .hero-content h1 span {
+    -webkit-text-stroke: #f8aa2b 1.5px;
+  }
+
+  .menu h1 {
+    letter-spacing: 2px;
+    font-size: 35px;
+    font-style: italic;
   }
 }
