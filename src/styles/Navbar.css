@@ -1,9 +1,11 @@
+@import "./Colors.css";
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--background-color);
   padding: 20px 80px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
 nav .logo{
@@ -30,13 +32,13 @@ nav .logo{
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  color: black;
+  color: var(--primary-text-color);
   transition: 0.3s ease-in-out;
 }
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: #F8AA2B;
+  color: var(--foreground-color);
 }
 
 #navbar li a:hover::after,
@@ -44,7 +46,7 @@ nav .logo{
   content: "";
   width: 30%;
   height: 2px;
-  background-color: #F8AA2B;
+  background-color: var(--foreground-color);
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -55,7 +57,61 @@ nav .logo{
 }
 
 #mobile i {
-  color: black;
+  color:var(--primary-text-color);
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+#navbar div{
+  padding: 0 20px;
+  padding-top: 5px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #e6e6e6;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #fba00e;
+}
+
+.checkbox-label .ball {
+  background-color:var(--foreground-color);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.checkbox:checked +.checkbox-label{
+  background-color: #000000;
 }
 
 
@@ -71,7 +127,7 @@ nav .logo{
     right: -300px;
     width: 300px;
     height: 100vh;
-    background-color: rgb(251, 251, 251);
+    background-color: var(--background-color);
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 40px 0 0 10px;
     transition: 0.3s ease-in-out;

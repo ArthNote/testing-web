@@ -1,3 +1,5 @@
+@import "./Colors.css";
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -25,33 +27,35 @@
 
 .hero-content h1 {
   font-size: 70px;
+  color: black;
   -webkit-text-stroke: black 1px;
 }
 
 .hero-content h1 span {
-  color: #f8aa2b;
+  color: var(--foreground-color);
   -webkit-text-stroke: black 1.5px;
 }
 
 .hero-content h4 {
   font-weight: 400;
   letter-spacing: 2px;
+  color: black;
 }
 
 .hero-content a {
   text-decoration: none;
-  background-color: #f8aa2b;
-  color: white;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
   padding: 6px 23px;
   font-weight: 600;
   border-radius: 6px;
   width: fit-content;
-  border: #f8aa2b solid 2px;
+  border: var(--foreground-color) solid 2px;
 }
 
 .hero-content a:hover {
-  border: solid #f8aa2b 2px;
-  color: #f8aa2b;
+  border: solid var(--foreground-color) 2px;
+  color: var(--foreground-color);
   background-color: transparent;
   transition: 0.2s ease-in-out;
 }
@@ -65,12 +69,14 @@
   align-items: center;
   padding: 40px 0;
   gap: 20px;
+  background-color: var(--background-color);
 }
 
 .menu h1 {
   letter-spacing: 2px;
   font-size: 45px;
   font-style: italic;
+  color: var(--primary-text-color);
 }
 
 .menu-items {
@@ -92,11 +98,11 @@
   height: fit-content;
   height: 340px;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px var(--primary-text-color);
 }
 
 .item:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px var(--foreground-color);
   transition: 0.2s ease-in-out;
 }
 
@@ -116,11 +122,13 @@
   font-size: 30px;
   letter-spacing: 1px;
   font-weight: 700;
+  color: var(--primary-text-color);
 }
 
 .item-content p {
   letter-spacing: 1px;
   font-weight: 500;
+  color: var(--primary-text-color);
 }
 
 @media screen and (max-width: 769px) {
@@ -131,7 +139,7 @@
   .hero-content {
     align-items: center;
     text-align: center;
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 15px;
     padding: 40px;
     margin: 0 20px;
@@ -139,15 +147,22 @@
 
   .hero-content h1 {
     font-size: 50px;
+    color: var(--primary-text-color);
+    -webkit-text-stroke: var(--primary-text-color) 1px;
   }
 
   .hero-content h1 span {
-    -webkit-text-stroke: #f8aa2b 1.5px;
+    -webkit-text-stroke: var(--foreground-color) 0px;
   }
 
   .menu h1 {
     letter-spacing: 2px;
     font-size: 35px;
     font-style: italic;
+  }
+
+
+  .hero-content h4 {
+    color: var(--primary-text-color);
   }
 }

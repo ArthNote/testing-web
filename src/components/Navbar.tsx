@@ -4,7 +4,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useState } from "react";
 
-function Navbar() {
+function Navbar({handleTheme}: any) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -23,6 +23,14 @@ function Navbar() {
             <CustomeLink to="/menu">Menu</CustomeLink>
             <CustomeLink to="/about">About</CustomeLink>
             <CustomeLink to="/contact">Contact</CustomeLink>
+            <div>
+              <input type="checkbox" className="checkbox" id="checkbox" onClick={handleTheme}/>
+              <label htmlFor="checkbox" className="checkbox-label">
+                <i className="fas fa-moon"></i>
+                <i className="fas fa-sun"></i>
+                <span className="ball"></span>
+              </label>
+            </div>
           </ul>
         </div>
         <div id="mobile" onClick={handleClick}>
@@ -35,9 +43,9 @@ function Navbar() {
 
 export default Navbar;
 
-function CustomeLink({ to, children}: any) {
+function CustomeLink({ to, children }: any) {
   const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({path : resolvedPath.pathname, end: true})
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
   return (
     <li>
       <Link to={to} className={isActive ? "active" : ""}>

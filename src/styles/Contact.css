@@ -1,4 +1,7 @@
+@import "./Colors.css";
+
 .container-box {
+  background-color: var(--background-color);
   width: 100vw;
   height: 84.5vh;
   display: flex;
@@ -26,6 +29,10 @@
   gap: 40px;
 }
 
+.contact h1{
+  color: var(--primary-text-color);
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
@@ -33,10 +40,10 @@
 }
 
 .contact form input {
-  color: black;
+  color:var(--primary-text-color);
   padding: 10px 0;
   border: none;
-  border-bottom: #f8aa2b solid 1px;
+  border-bottom: var(--foreground-color) solid 1px;
   background-color: transparent;
   margin: 10px 0;
 }
@@ -47,9 +54,9 @@
 
 .contact form textarea {
   padding: 10px 0;
-  color: black;
+  color: var(--primary-text-color);
   border: none;
-  border-bottom: #f8aa2b solid 1px;
+  border-bottom: var(--foreground-color) solid 1px;
   background-color: transparent;
   margin: 10px 0;
   max-height: 100px;
@@ -65,16 +72,16 @@
   border: none;
   width: fit-content;
   padding: 6px 23px;
-  color: white;
-  background-color: #f8aa2b;
+  color: var(--background-color);
+  background-color: var(--foreground-color);
   font-weight: 600;
   border-radius: 6px;
-  border: #f8aa2b solid 2px;
+  border: var(--foreground-color) solid 2px;
 }
 
 .contact form button:hover {
-  border: solid #f8aa2b 2px;
-  color: #f8aa2b;
+  border: solid var(--foreground-color) 2px;
+  color: var(--foreground-color);
   background-color: transparent;
   transition: 0.2s ease-in-out;
 }

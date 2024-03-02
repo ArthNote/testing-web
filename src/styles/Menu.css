@@ -1,3 +1,5 @@
+@import "./Colors.css";
+
 .menu-section {
   width: 100%;
   display: flex;
@@ -5,12 +7,14 @@
   align-items: center;
   padding: 40px 0;
   gap: 20px;
+  background-color: var(--background-color);
 }
 
 .menu-section h1 {
   letter-spacing: 2px;
   font-size: 45px;
   font-style: italic;
+  color: var(--primary-text-color);
 }
 
 .menu-item-list {
