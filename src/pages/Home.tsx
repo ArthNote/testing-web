@@ -12,7 +12,7 @@ function Home() {
           <h1>
             Pedro's <span>Pizzeria</span>
           </h1>
-          <h4>PIZZA TO FIT ANY TASTE</h4>
+          <h4>A PIZZA TO FIT ANY TASTE</h4>
           <Link to="/menu"> ORDER </Link>
         </div>
       </section>
